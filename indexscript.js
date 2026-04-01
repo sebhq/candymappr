@@ -16,7 +16,7 @@ fetch('houses.json')
           navigator.geolocation.getCurrentPosition(pos => {
             placeMarker([pos.coords.latitude, pos.coords.longitude],
               house.address, house.candy, true, house.outOfCandy);
-            map.flyTo(pos.coords.latitude, pos.coords.longitude, 16);
+            map.flyTo([pos.coords.latitude, pos.coords.longitude], 16);
           });
         }
       } else {
